@@ -1,0 +1,20 @@
+{
+    "profile":{
+        "rol":"Desarrollador Front-end",
+        "description":"Mas de 1 año de experiencia en desarrollo web. Apasionado de las nuevas tecnologias y en especial el ecosistema de CSS y JavaScript."
+    },
+    "experience":{
+        "experience-title":"Experiencia",
+        "first-job-title":"Desarrollador Full-Stack",
+        "first-job-dates":"Julio 2020 - Actualmente",
+        "first-job-description":"Arquitecto digital de su inventario. Diseñé aplicaciones web que transformaron la gestión de stock, creando un flujo de trabajo eficiente. Además, mantuve la infraestructura informática, garantizando un rendimiento óptimo. Mi creatividad brilló al diseñar sitios web y páginas de aterrizaje, impulsando nuestras estrategias de marketing y llevando a la empresa a nuevas alturas.",
+        "second-job-title":"Desallador Front-end",
+        "second-job-dates":"Enero 2017",
+        "second-job-description":"lorem ipsum dolor sit amet, consectetur"
+    },
+    "hobbies":{
+        "first-hob-title":"Pasatiempos",
+        "second-hob-title":"Estudiante ✍️",
+        "hob-description":"Apasionado estudiante de programación, especializado en HTML, CSS, JavaScript, React, Node.js, Firebase y GitHub. Mi compromiso con el aprendizaje constante me impulsa a superar desafíos creativos." 
+    }
+}

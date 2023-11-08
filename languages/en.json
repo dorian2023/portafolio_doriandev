@@ -1,0 +1,20 @@
+{
+    "profile":{
+        "rol":"Front-end Developer",
+        "description":"More than 1 year of experience in web development. Passionate about new technologies and especially the CSS and JavaScript ecosystem."
+    },
+    "experience":{
+        "experience-title":"Experience",
+        "first-job-title":"Full-Stack Developer",
+        "first-job-dates":"July 2020 - Current",
+        "first-job-description":"Digital architect of your inventory. I designed web applications that transformed stock management, creating an efficient workflow. Additionally, I maintained the IT infrastructure, ensuring optimal performance. My creativity shined when designing websites and landing pages, driving our marketing strategies and taking the company to new heights.",
+        "second-job-title":"Front-end Developer",
+        "second-job-dates":"January 2017",
+        "second-job-description":"lorem ipsum dolor sit amet, consectetur"
+    },
+    "hobbies":{
+        "first-hob-title":"Hobbies",
+        "second-hob-title":"Student ✍️",
+        "hob-description":"Passionate programming student, specialized in HTML, CSS, JavaScript, React, Node.js, Firebase and GitHub. My commitment to constant learning drives me to overcome creative challenges." 
+    }
+}
