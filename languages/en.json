@@ -16,5 +16,8 @@
         "first-hob-title":"Hobbies",
         "second-hob-title":"Student ✍️",
         "hob-description":"Passionate programming student, specialized in HTML, CSS, JavaScript, React, Node.js, Firebase and GitHub. My commitment to constant learning drives me to overcome creative challenges." 
+    },
+    "cart1":{
+        "cart1-small":"Years of experience"
     }
 }

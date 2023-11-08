@@ -87,6 +87,20 @@ body.dark{
 }
 
 
+.redes{
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.redes_link{
+    width: 30px;
+}
+.redes__img{
+    display: block;
+    cursor: pointer;
+}
+
 
 
 
@@ -318,7 +332,7 @@ body.dark{
     padding: 0.4em .8em;
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
-    color: var(--bg-color);
+    color: hsl(0, 0%, 90%);
 }
 .buttons{
     display: flex;
@@ -335,7 +349,7 @@ body.dark{
 }
 .button--primary{
     background-color: var(--primary-color);
-    color: var(--bg-color);
+    color: hsl(0, 0%, 90%);
 }
 .button--ghost{
     background-color: transparent;

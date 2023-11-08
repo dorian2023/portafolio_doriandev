@@ -16,5 +16,8 @@
         "first-hob-title":"Pasatiempos",
         "second-hob-title":"Estudiante ✍️",
         "hob-description":"Apasionado estudiante de programación, especializado en HTML, CSS, JavaScript, React, Node.js, Firebase y GitHub. Mi compromiso con el aprendizaje constante me impulsa a superar desafíos creativos." 
+    },
+    "cart1":{
+        "cart1-small":"Años de experiencia"
     }
 }
