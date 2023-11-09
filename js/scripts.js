@@ -32,11 +32,11 @@ flagsElement.addEventListener('click',(e) =>{
 toggleTheme.addEventListener('click', () =>{
     document.body.classList.toggle("dark");
     if (toggleIcon.src.includes('A.png')) {
-        toggleIcon.src='assets/img/A.svg';
-        toggleText.textContent = '🌚';
+        toggleIcon.src='assets/img/A.png';
+        toggleText.textContent = '🌚 Dark Mode';
     }else{
         toggleIcon.src='assets/img/A.png';
-        toggleText.textContent = "🌞";
+        toggleText.textContent = "🌞 Light Mode";
     }
 });
 
