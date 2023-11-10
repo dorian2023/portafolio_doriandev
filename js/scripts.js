@@ -33,10 +33,10 @@ toggleTheme.addEventListener('click', () =>{
     document.body.classList.toggle("dark");
     if (toggleIcon.src.includes('A.png')) {
         toggleIcon.src='assets/img/A.png';
-        toggleText.textContent = '🌚 Dark Mode';
+        toggleText.textContent = '🌚';
     }else{
         toggleIcon.src='assets/img/A.png';
-        toggleText.textContent = "🌞 Light Mode";
+        toggleText.textContent = "🌞";
     }
 });
 
