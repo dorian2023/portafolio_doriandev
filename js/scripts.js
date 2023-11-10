@@ -10,6 +10,17 @@ const flagsElement = document.getElementById('flags');
 
 const textsToChange = document.querySelectorAll('[data-section]');
 
+
+// Simula el tiempo que tarda en cargar la página (puedes quitar esto en producción)
+window.addEventListener('load', function () {
+    setTimeout(removeLoader, 2000); // 2000 milisegundos = 2 segundos
+});
+
+function removeLoader() {
+    document.querySelector('.loader-wrapper').style.display = 'none';
+}
+
+
 const changeLanguage = async (language) => {
     const requestJson = await fetch(`./languages/${language}.json`);
     const texts = await requestJson.json();
@@ -35,7 +46,7 @@ toggleTheme.addEventListener('click', () =>{
         toggleIcon.src='assets/img/A.png';
         toggleText.textContent = '🌚';
     }else{
-        toggleIcon.src='assets/img/A.png';
+        toggleIcon.src='assets/img/A.svg';
         toggleText.textContent = "🌞";
     }
 });
@@ -43,3 +54,69 @@ toggleTheme.addEventListener('click', () =>{
 toggleColors.addEventListener('click', (e) =>{
     rootStyle.setProperty('--primary-color', e.target.dataset.color);
 });
+
+
+
+//container Reloj Fecha
+(function ()  {
+    var actualizarHora = function () {
+        var fecha = new Date(),
+            horas = fecha.getHours(),
+            ampm,
+            minutos = fecha.getMinutes(),
+            segundos = fecha.getSeconds(),
+            diaSemana = fecha.getDay(),
+            dia = fecha.getDate(),
+            mes = fecha.getMonth(),
+            year = fecha.getFullYear();
+           
+         var pHoras = document.getElementById('horas'),
+            pAMPM = document.getElementById('ampm'),
+            pMinutos = document.getElementById('minutos'),
+            pSegundos = document.getElementById('segundos'),
+            pDiaSemana = document.getElementById('diaSemana'),
+            pDia = document.getElementById('dia'),
+            pMes = document.getElementById('mes'),
+            pYear = document.getElementById('year');
+
+        var semana = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+        var meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','September','Octubre','Noviembre','Diciembre'];
+
+        pDiaSemana.textContent = semana[diaSemana];
+        pDia.textContent = dia;
+        pMes.textContent = meses[mes];
+        pYear.textContent = year;
+
+        //Cambia de AM a PM
+        if (horas >= 12) {
+            horas = horas - 12;
+            ampm = 'PM';
+        }else{
+            ampm = 'AM';
+        }
+
+        //Cuando llegue el reloj a las 0 horas, cambiar a 12 am.
+        if (horas == 0) {
+            horas = 12;
+        }
+
+        pHoras.textContent = horas;
+        pAMPM.textContent = ampm;
+
+        //Coloca los minutos de 1 a 01
+        if (minutos <10) {
+            minutos = "0" + minutos
+        };
+
+        //Coloca los minutos de 1 a 01
+        if (segundos <10) {
+            segundos = "0" + segundos
+        };
+
+
+        pMinutos.textContent = minutos;
+        pSegundos.textContent = segundos;
+    };
+    actualizarHora();
+    let intervalo = setInterval(actualizarHora, 1000);
+}());

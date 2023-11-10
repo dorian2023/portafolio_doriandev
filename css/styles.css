@@ -1,5 +1,5 @@
 :root{
-    --primer-color: hsl(215, 30%, 8%);
+    --primary-color: hsla(220, 60%, 7%, 0.946);
     --text-color: hsl(0, 0%, 31%);
     --text-color2: hsl(0, 3%, 77%);
     --bg-color: hsl(0, 0%, 90%);
@@ -7,6 +7,7 @@
     --border-radius:  0.4em;
     --transition: color 0.5s, background-color 0.9s ease-in-out;
     --skills-bar-length: 0%;
+    --bg-image: linear-gradient(to bottom, #1e5799, #2989d8, #207cca, #7db9e8);
 }
 
 *{
@@ -21,13 +22,97 @@ img{
     display: block;
 }
 
+/* LOADING */
+.loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.668); /* Fondo semi-transparente */
+    z-index: 999; /* Asegura que el loader esté encima de todo */
+}
+.loader {
+    border: 8px solid #cd9999a3; /* Gris claro */
+    border-top: 8px solid #5f0202; /* Azul */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Animación de rotación */
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.fecha {
+    display: flex;
+    gap: 3px;
+    position: absolute;
+    top: -9px; /* Ajusta la posición vertical según sea necesario */
+    right: 11%; /* Ajusta la posición horizontal según sea necesario */
+    z-index: 9999; /* Asegura que la fecha esté en la parte superior */
+    font-family: Oswald, Arial;
+    font-size: 1.3em;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px;
+    color: var(--text-color2);
+    text-shadow: 2px 2px 4px var(--primary-color);
+}
+.reloj {
+    display: flex;
+    position: absolute;
+    top: -19px; /* Ajusta la posición vertical según sea necesario */
+    right: 52%; /* Ajusta la posición horizontal según sea necesario */
+    z-index: 9999; /* Asegura que el reloj esté en la parte superior */
+    font-family: Oswald, Arial;
+    font-size: 2em;
+    background: rgba(0, 0, 0, 0);
+    text-shadow: 2px 2px 4px var(--primary-color);
+    align-content: center;
+    color: var(--text-color);
+    padding: 10px;
+    
+}
+.wrap{
+    width: 90%;
+    max-width: 1000px;
+    /* margin: auto; */
+}
+.widget{
+    width: 40%;
+    margin: 2em;
+   /* margin: 32px; */
+}
+.widget p {
+    display: inline-block;
+    line-height: 1em;
+}
+.reloj .caja-segundos{
+    display: inline-block;
+    padding-top:0px ;
+}
+.reloj .segundos, .reloj .ampm{
+    font-size: 2rem;
+    display: block;
+    
+}
+@media screen and (max-width: 720px){
+    .wrap{
+        display: none !important;
+    }
+}
 
 
 
 
 body{
     margin: 0;
-    background-color: var(--bg-color);
+    background-image:linear-gradient(to bottom, #000000, #24194e, #001f3a, #22679c);
     color: var(--text-color1);
     transition: var(--transition);
     font-family: sans-serif;
@@ -43,10 +128,11 @@ body.dark{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 75px;
+    height: 50px;
     padding: 0 1.5em;
     background-color: var(--bg-card-color);
     transition: var(--transition);
+    margin-top: -25px;
 }
 .switches{
     display: flex;
@@ -119,7 +205,7 @@ body.dark{
     cursor: pointer;
 }
 .colors__item--blue{
-    --primary-color: hsl(214, 84%, 56%);
+    --primary-color: hsla(232, 91%, 37%, 0.873);
     border-radius: 50%;
 }
 .colors__item--green{
@@ -173,6 +259,8 @@ body.dark{
     padding: 1em;
     background: var(--bg-card-color);
     border-radius: var(--border-radius);
+    box-shadow: 2px 0px 1px 1px var(--primary-color);
+    transition: var(--transition);
 }
 .card__image-container{
     min-width: 320px;
@@ -353,7 +441,7 @@ body.dark{
     border: 1px solid var(--primary-color);
 }
 .button--ghost{
-    background-color: transparent;
+    background-color: var(--bg-color);
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
