@@ -124,6 +124,7 @@ body.dark{
     --bg-card-color: hsl(0, 0%, 20%);
     color: var(--text-color2);
 }
+
 .header{
     display: flex;
     align-items: center;
@@ -133,6 +134,11 @@ body.dark{
     background-color: var(--bg-card-color);
     transition: var(--transition);
     margin-top: -25px;
+}
+@media screen and (max-width: 720px){
+    .header{
+        margin-top: 0px;
+    }
 }
 .switches{
     display: flex;
@@ -205,7 +211,7 @@ body.dark{
     cursor: pointer;
 }
 .colors__item--blue{
-    --primary-color: hsla(232, 91%, 37%, 0.873);
+    --primary-color: hsla(232, 91%, 37%);
     border-radius: 50%;
 }
 .colors__item--green{
