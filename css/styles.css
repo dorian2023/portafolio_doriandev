@@ -5,7 +5,7 @@
     --bg-color: hsl(0, 0%, 90%);
     --bg-card-color: hsl(0, 0%, 98%);
     --border-radius:  0.4em;
-    --transition: color 0.5s, background-color 0.9s ease-in-out;
+    --transition: color 1.5s, background-color 1.9s ease-in-out;
     --skills-bar-length: 0%;
     --bg-image: linear-gradient(to bottom, #1e5799, #2989d8, #207cca, #7db9e8);
 }
@@ -272,6 +272,14 @@ body.dark{
     min-width: 320px;
     border-radius: var(--border-radius);
     overflow: hidden;
+}
+.card__image1{
+    height: auto;
+
+}
+.card__image2{
+    height: 213px;
+
 }
 .card__header{
     padding: 1em 0;
